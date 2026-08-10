@@ -1,0 +1,24 @@
+<svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="lime" x1="120" y1="40" x2="330" y2="240" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D8FF6E"/>
+      <stop offset="1" stop-color="#C6FF3D"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="180" y1="270" x2="420" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4C74FF"/>
+      <stop offset="1" stop-color="#2E5BFF"/>
+    </linearGradient>
+    <linearGradient id="ink" x1="60" y1="270" x2="180" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3A3F47"/>
+      <stop offset="1" stop-color="#2A2E35"/>
+    </linearGradient>
+  </defs>
+  <!-- top-left large block: voltage lime (the hero accent) -->
+  <path d="M138 40 L352 40 L300 232 L86 232 Z" fill="url(#lime)"/>
+  <!-- top-right small block: ink neutral -->
+  <path d="M372 120 L456 120 L430 232 L346 232 Z" fill="url(#ink)"/>
+  <!-- bottom-left small block: ink neutral -->
+  <path d="M78 268 L182 268 L156 380 L52 380 Z" fill="url(#ink)"/>
+  <!-- bottom-right large block: electric blue -->
+  <path d="M206 268 L420 268 L368 460 L154 460 Z" fill="url(#blue)"/>
+</svg>
