@@ -18,12 +18,9 @@ export const Footer = () => {
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
                     <div className="space-y-6">
-                        <Link href="/" className="flex items-center space-x-2">
-                            <img src="/images/logo.png" alt="Amazesst Logo" className="h-10 w-10 object-contain" />
-                            <span className="text-2xl font-black tracking-tighter text-white uppercase">
-                                Amazesst
-                            </span>
-                        </Link>
+                        <Link href="/" className="flex items-center">
+                        <img src="/images/logo.png" alt="Amazesst" className="h-10 w-auto object-contain" />
+                    </Link>
                         <p className="text-gray-500 text-sm leading-relaxed max-w-xs">
                             More Revenue. More Margins. No Guesswork.
                         </p>
