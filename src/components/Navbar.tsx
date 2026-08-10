@@ -54,11 +54,8 @@ export const Navbar = () => {
             )}
         >
             <div className="max-w-7xl mx-auto flex items-center justify-between">
-                <Link href="/" className="flex items-center space-x-2">
-                    <Image src="/images/logo.png" alt="Amazesst Logo" width={40} height={40} className="object-contain" />
-                    <span className="text-xl font-bold tracking-tight text-white uppercase">
-                        Amazesst
-                    </span>
+                <Link href="/" className="flex items-center">
+                    <Image src="/images/logo.png" alt="Amazesst" width={160} height={40} className="object-contain h-8 w-auto" />
                 </Link>
 
                 {/* Desktop Links */}
