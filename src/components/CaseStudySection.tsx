@@ -8,6 +8,7 @@ import Link from "next/link";
 const caseStudies = [
     {
         brand: "Nootropic Energy Pouches",
+        productImage: "/images/rebel-product.jpg",
         slug: "new-product-launch-profitable-first-quarter",
         before: "First Amazon launch never got off the ground, zero meaningful sales",
         after: "$139,912 in the first 90 days, profitable from day one",
@@ -16,7 +17,8 @@ const caseStudies = [
         highlight: "blue",
     },
     {
-        brand: "Blood Sugar Support Supplement",
+        brand: "SightCare Eye Health Supplement",
+        productImage: "/images/sightcare-product.jpg",
         slug: "account-turnaround-150-acos-to-17-percent",
         before: "Inherited from three agencies at 150%+ ACOS, losing money at scale",
         after: "17.78% ACOS on $1.57M in a single month",
@@ -27,6 +29,7 @@ const caseStudies = [
     },
     {
         brand: "Himalayan Shilajit Resin",
+        productImage: "/images/shilajit-product.png",
         slug: "profitable-scaling-more-spend-lower-acos",
         before: "$16,104 spend at 23.2% ACOS, next dollar cost more than the last",
         after: "Ad spend up 126%, ad sales up 161%, ACOS down to 20.1%",
@@ -88,6 +91,16 @@ export const CaseStudySection = () => {
                             {study.popular && (
                                 <div className="absolute top-6 right-6 z-20 bg-secondary-brand text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
                                     Most Popular
+                                </div>
+                            )}
+
+                            {study.productImage && (
+                                <div className="relative h-48 bg-white flex items-center justify-center p-4 overflow-hidden">
+                                    <img
+                                        src={study.productImage}
+                                        alt={study.brand}
+                                        className="max-h-full w-auto object-contain"
+                                    />
                                 </div>
                             )}
 
