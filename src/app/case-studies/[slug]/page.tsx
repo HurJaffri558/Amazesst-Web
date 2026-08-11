@@ -15,6 +15,7 @@ const caseStudyData = {
         title: "NEW PRODUCT LAUNCH",
         subtitle: "$0 to $139,912 in the first 90 days, profitable from the first quarter, after a first launch that never got off the ground.",
         image: "/images/Result2.png",
+        productImage: "/images/rebel-product.jpg",
         introduction: "A US energy and nootropics brand in the caffeine pouch category. Their first Amazon launch had failed, not because Amazon didn't want the product, but because nothing was ready when the traffic arrived. We rebuilt the second launch from zero, and it was profitable from day one.",
         challenges: [
             "Listings that couldn't be found: copy written for humans, not structured for Amazon's index. Organic visibility never built.",
@@ -55,7 +56,8 @@ const caseStudyData = {
         title: "ACCOUNT TURNAROUND",
         subtitle: "Inherited from three agencies at 150%+ ACOS. Rebuilt to 17.78% ACOS on $1.57M in a single month.",
         image: "/images/germany-ap.jpeg",
-        introduction: "A clinically tested herbal blood sugar support supplement, a ten-herb formula in one of Amazon's most scrutinised health categories. Volume was already flowing, but the machine underneath it had been built wrong, three times over. The account didn't need more spend or more campaigns. It needed the unprofitable ones switched off, and a structure that could tell the difference.",
+        productImage: "/images/sightcare-product.jpg",
+        introduction: "SightCare, a clinically formulated eye-health and vision support supplement, in one of Amazon's most scrutinised health categories. Volume was already flowing, but the machine underneath it had been built wrong, three times over. The account didn't need more spend or more campaigns. It needed the unprofitable ones switched off, and a structure that could tell the difference.",
         challenges: [
             "~600 campaigns with no hierarchy: years of sediment from three agencies, bidding against each other for the same keywords.",
             "ACOS above 150%: every advertised sale cost more than it earned, at scale, every day.",
@@ -70,7 +72,7 @@ const caseStudyData = {
         execution: [
             "Conversion rebuild: copy, creative and SEO rebuilt together, so every point of CR lowered ACOS across all 600 campaigns.",
             "PPC funnel rebuilt by intent, top, middle and bottom of funnel, with nothing competing.",
-            "Image stack rebuilt to do the educational work a multi-botanical formula demands, so shoppers understand before they reach the reviews."
+            "Image stack rebuilt to do the educational work a multi-nutrient eye formula demands, so shoppers understand before they reach the reviews."
         ],
         results: [
             "ACOS rebuilt from 150%+ down to 17.78%.",
@@ -85,7 +87,7 @@ const caseStudyData = {
         additionalDetails: [
             "Success condition: move LTV:CAC from negative to positive, then scale.",
             "Clinical positioning stated up front, before price becomes the comparison.",
-            "Ingredient education carried in the gallery, not buried in bullet copy.",
+            "Ingredient and eye-health education carried in the gallery, not buried in bullet copy.",
             "Cost per click held at $0.33 while advertising turned back into a growth engine."
         ],
         stats: "$1.57M",
@@ -95,6 +97,7 @@ const caseStudyData = {
         title: "PROFITABLE SCALING",
         subtitle: "Ad spend up 126%, ad sales up 161%, and ACOS still fell from 23.2% to 20.1%.",
         image: "/images/Result3.png",
+        productImage: "/images/shilajit-product.png",
         introduction: "A single-SKU pure Himalayan shilajit resin in one of the fastest-growing and least regulated corners of the Amazon supplement market. Clicks are cheap to buy in a high-demand category. Converting them profitably against ten near-identical jars is the hard part, which makes efficiency, not volume, the binding constraint. Most accounts buy growth by giving up efficiency. We did the opposite.",
         challenges: [
             "Sceptical category: dozens of identical listings with purity claims a shopper cannot verify.",
