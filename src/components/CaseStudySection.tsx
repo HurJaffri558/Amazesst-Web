@@ -37,6 +37,36 @@ const caseStudies = [
         color: "from-[#C6FF3D]/20 to-transparent",
         highlight: "pink",
     },
+    {
+        brand: "EnfanteVita Kids Multivitamin",
+        productImage: "/images/enfantevita-product.jpg",
+        slug: "enfantevita-kids-multivitamin-launch-scale",
+        before: "Sales stalled, ACOS above margin, no reorder engine to make spend pay",
+        after: "$1.823M trailing sales, scaled month over month from a near-zero start",
+        result: "Near-Zero to $1.82M, Scaled Profitably",
+        color: "from-[#2E5BFF]/20 to-transparent",
+        highlight: "blue",
+    },
+    {
+        brand: "VitalSupp Electrolytes",
+        productImage: "/images/vitalsupp-product.png",
+        slug: "vitalsupp-electrolyte-profitable-growth",
+        before: "Rising CAC and TACoS drifting over margin in a discount-led category",
+        after: "$1.097M in a single month, up 5% MoM and 9% YoY, on efficiency not discounts",
+        result: "$1.097M/Month, Growth From Efficiency",
+        color: "from-[#2E5BFF]/20 to-transparent",
+        highlight: "purple",
+    },
+    {
+        brand: "Longevity Couture Hydrogen Bottle",
+        productImage: "/images/longevity-product.jpg",
+        slug: "longevity-couture-hydrogen-premium-scale",
+        before: "Expensive acquisition on a high-ticket device, margin at risk at scale",
+        after: "$24.91M trailing sales, up 32% period-on-period, CAC held under control",
+        result: "$24.91M Scaled, Up 32% at Controlled CAC",
+        color: "from-[#C6FF3D]/20 to-transparent",
+        highlight: "pink",
+    },
 ];
 
 export const CaseStudySection = () => {
