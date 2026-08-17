@@ -2,68 +2,77 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
-const logos = [
-    { name: "Brand 1", url: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" },
-    { name: "Brand 2", url: "https://sheayeleen.com/cdn/shop/files/SheaYeleen_Logo_2021_Lavender_180x.png?v=1614295349" },
-    { name: "Brand 3", url: "https://www.sesres.com/wp-content/uploads/2022/06/SES-Logo-111x80-1.png" },
-    { name: "Brand 4", url: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" },
-    { name: "Brand 5", url: "https://www.shedavi.com/cdn/shop/files/logo.png?v=1688918940&width=220" },
-    { name: "Brand 6", url: "https://logos-world.net/wp-content/uploads/2020/05/Icon-Nike-500x281.png" },
-    { name: "Brand 6", url: "https://cdn11.bigcommerce.com/s-9a8d8/images/stencil/original/ezgif.com-gif-maker-removebg-preview_1670933512__14246.original.png" },
-    { name: "Brand 6", url: "https://smacne.co/assets/logo-1d223405b67f0087976a4d42958551af7d1afa54fa9393425862c6cd9585aa93.svg" },
+const tools = [
+  { name: "Jungle Scout", src: "/tools/jungle-scout.png" },
+  { name: "Keepa", src: "/tools/keepa.jpg" },
+  { name: "DataDive", src: "/tools/datadive.png" },
+  { name: "Sellerboard", src: "/tools/sellerboard.jpg" },
+  { name: "Sellics", src: "/tools/sellics.jpg" },
+  { name: "Perpetua", src: "/tools/perpetua.jpg" },
+  { name: "Pacvue", src: "/tools/pacvue.png" },
+  { name: "Teikametrics", src: "/tools/teikametrics.jpg" },
+  { name: "Viral Launch", src: "/tools/viral-launch.png" },
+  { name: "AMZScout", src: "/tools/amzscout.png" },
+];
+
+const badges = [
+  { src: "/badges/amazon-ads-advanced-partner.jpg", alt: "Amazon Ads Advanced Partner" },
+  { src: "/badges/amazon-ads-verified-partner.png", alt: "Amazon Ads Verified Partner" },
+  { src: "/badges/amazon-marketing-cloud-provider.png", alt: "Amazon Marketing Cloud Provider" },
+  { src: "/badges/innovation-award-2022.webp", alt: "Amazon Ads Innovation Award Winner US 2022" },
 ];
 
 export const LogoScroller = () => {
-    const [mounted, setMounted] = React.useState(false);
-    React.useEffect(() => {
-        setMounted(true);
-    }, []);
+  const [mounted, setMounted] = React.useState(false);
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
 
-    if (!mounted) return <div className="h-64 bg-black" />;
+  if (!mounted) return <div className="h-64 bg-black" />;
 
-    return (
-        <section className="py-24 border-t border-white/5 overflow-hidden bg-black">
-            <div className="max-w-7xl mx-auto px-6 mb-12 text-center">
-                <h3 className="text-gray-500 font-bold uppercase tracking-[0.3em] text-xs">
-                    Powering The Best Amazon Sellers
-                </h3>
+  return (
+    <section className="py-24 border-t border-white/5 overflow-hidden bg-black">
+      <div className="max-w-7xl mx-auto px-6 mb-12 text-center">
+        <span className="inline-flex items-center gap-2 px-4 py-1.5 mb-4 rounded-full border border-white/10 bg-white/5 text-xs font-semibold text-gray-200">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#C6FF3D] shadow-[0_0_10px_#C6FF3D]" />
+          Our Stack &amp; Partnerships
+        </span>
+        <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-white">
+          Real tools. Real brands. <span className="text-[#C6FF3D]">Scaled.</span>
+        </h2>
+      </div>
+
+      <p className="max-w-7xl mx-auto px-6 mb-3 text-xs font-bold uppercase tracking-[0.14em] text-gray-500">
+        Amazon toolkit
+      </p>
+
+      <div className="flex overflow-hidden relative [mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)]">
+        <motion.div
+          animate={{ x: [0, -1200] }}
+          transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+          className="flex flex-none gap-4 py-4"
+        >
+          {[...tools, ...tools, ...tools].map((t, i) => (
+            <div
+              key={i}
+              className="flex items-center gap-2.5 px-5 whitespace-nowrap rounded-full bg-white border border-gray-200 shadow-lg text-gray-900 font-semibold text-sm"
+              style={{ height: 52 }}
+            >
+              <img src={t.src} alt={t.name} className="w-6 h-6 object-contain" />
+              {t.name}
             </div>
+          ))}
+        </motion.div>
+      </div>
 
-            <div className="flex overflow-hidden relative">
-                <motion.div
-                    animate={{ x: [0, -1000] }}
-                    transition={{
-                        duration: 20, // Snappy scrolling
-                        repeat: Infinity,
-                        ease: "linear",
-                    }}
-                    className="flex flex-none gap-20 py-12"
-                >
-                    {[...logos, ...logos, ...logos].map((logo, i) => (
-                        <motion.div
-                            key={i}
-                            initial={{ opacity: 0.3, filter: "grayscale(100%)", scale: 0.8 }}
-                            whileInView={{ opacity: 1, filter: "grayscale(0%)", scale: 1 }}
-                            whileHover={{
-                                scale: 1.3,
-                                filter: "grayscale(0%) drop-shadow(0 0 15px rgba(255,255,255,0.2))",
-                                zIndex: 10
-                            }}
-                            whileTap={{ scale: 1.5, rotate: 5 }} // Popup on touch
-                            viewport={{ amount: 0.4 }}
-                            className="flex items-center justify-center w-32 transition-all duration-300 cursor-pointer"
-                        >
-                            <img
-                                src={logo.url}
-                                alt={logo.name}
-                                className="max-h-12 w-auto invert brightness-100"
-                            />
-                        </motion.div>
-                    ))}
-                </motion.div>
-            </div>
-        </section>
-    );
+      <div className="max-w-6xl mx-auto px-6 mt-16 flex flex-wrap gap-5 justify-center items-center">
+        {badges.map((b) => (
+          <div key={b.alt} className="bg-white rounded-2xl px-5 py-3.5 shadow-2xl grid place-items-center">
+            <img src={b.src} alt={b.alt} className="h-16 w-auto" />
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 };
