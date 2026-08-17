@@ -98,3 +98,75 @@ body {
 .blog-content ol { list-style-type: decimal; padding-left: 1.5rem; margin-bottom: 1.5rem; }
 .blog-content img { border-radius: 1.5rem; margin: 2rem 0; border: 1px solid rgba(255,255,255,0.05); }
 .blog-content blockquote { border-left: 4px solid #fff; padding-left: 1.5rem; font-style: italic; color: #9ca3af; margin: 2rem 0; }
+/* ============================================
+   SECTION BACKGROUND TEXTURES — Amazesst
+   Added for branded, textured section backgrounds
+   ============================================ */
+
+/* Dot grid (on dark) */
+.tex-dots {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 22px 22px;
+  background-position: 0 0;
+}
+
+/* Faint grain overlay (CSS SVG noise) */
+.tex-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+}
+
+/* Optional richer grain from uploaded PNG */
+.tex-grain-img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.6;
+  background-image: url("/textures/grain.png");
+  background-size: 256px 256px;
+}
+
+/* Soft brand glows as section background accents */
+.glow-bg-lime::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 500px;
+  background: radial-gradient(ellipse at center, rgba(198, 255, 61, 0.10), transparent 70%);
+  filter: blur(20px);
+}
+
+.glow-bg-blue::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1000px;
+  height: 600px;
+  background: radial-gradient(ellipse at center, rgba(46, 91, 255, 0.16), transparent 70%);
+  filter: blur(20px);
+}
+
+/* Keep section content above texture/glow layers */
+.tex-grain > *,
+.tex-grain-img > *,
+.glow-bg-lime > *,
+.glow-bg-blue > * {
+  position: relative;
+  z-index: 1;
+}
