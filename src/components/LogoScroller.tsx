@@ -106,8 +106,8 @@ export const LogoScroller = () => {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 items-start justify-items-center">
           {badges.map((b) => (
             <div key={b.alt} className="flex flex-col items-center">
-              <div className="bg-white rounded-2xl p-6 shadow-2xl grid place-items-center h-36 w-full max-w-[240px]">
-                <img src={b.src} alt={b.alt} className="max-h-24 w-auto object-contain" />
+              <div className="grid place-items-center h-36 w-full max-w-[240px]">
+                <img src={b.src} alt={b.alt} className="max-h-28 w-auto object-contain" />
               </div>
               <p className="mt-4 text-sm font-semibold text-gray-300">{b.caption}</p>
             </div>
