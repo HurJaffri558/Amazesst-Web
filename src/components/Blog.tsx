@@ -27,7 +27,7 @@ export const Blog = () => {
     if (!mounted) return null;
 
     return (
-        <section id="blog" className="py-24 px-6 bg-black relative overflow-hidden">
+        <section id="blog" className="py-24 px-6 bg-[#0A1240] relative overflow-hidden tex-grain-img">
             <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
                     <div>
