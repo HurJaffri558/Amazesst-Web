@@ -28,10 +28,10 @@ const brands: { name: string; icon: React.ReactNode }[] = [
   { name: "HydraMax", icon: <svg viewBox="0 0 24 24" className="w-6 h-6"><path fill="currentColor" d="M12 2C8 8 5 11 5 15a7 7 0 0014 0c0-4-3-7-7-13z" /><path stroke="#C6FF3D" d="M8 15c1.5 1.5 6 1.5 8 0" strokeWidth="1.6" fill="none" strokeLinecap="round" /></svg> },
 ];
 
-const badges: { src: string; alt: string; caption: string; big?: boolean }[] = [
+const badges = [
   { src: "/badges/amazon-ads-advanced-partner.jpeg", alt: "Amazon Ads Advanced Partner", caption: "Advanced Partner" },
   { src: "/badges/amazon-ads-verified-partner.png", alt: "Amazon Ads Verified Partner", caption: "Verified Partner" },
-  { src: "/badges/amazon-marketing-cloud-provider.png", alt: "Amazon Marketing Cloud Provider", caption: "AMC Provider", big: true },
+  { src: "/badges/amazon-marketing-cloud-provider.png", alt: "Amazon Marketing Cloud Provider", caption: "AMC Provider" },
 ];
 
 export const LogoScroller = () => {
@@ -103,11 +103,11 @@ export const LogoScroller = () => {
         <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight text-white mb-12">
           Amazon Trusted Partner <span className="text-[#C6FF3D]">Certifications &amp; Awards</span>
         </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 items-start justify-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 items-stretch">
           {badges.map((b) => (
-            <div key={b.alt} className="flex flex-col items-center">
-              <div className="grid place-items-center h-44 w-full max-w-[260px]">
-                <img src={b.src} alt={b.alt} className={`w-auto object-contain ${b.big ? "max-h-36 scale-[1.6]" : "max-h-36"}`} />
+            <div key={b.alt} className="flex flex-col items-center w-full">
+              <div className="bg-white rounded-2xl shadow-2xl grid place-items-center h-40 w-full p-6">
+                <img src={b.src} alt={b.alt} className="max-h-full max-w-full w-auto object-contain" />
               </div>
               <p className="mt-4 text-sm font-semibold text-gray-300">{b.caption}</p>
             </div>
