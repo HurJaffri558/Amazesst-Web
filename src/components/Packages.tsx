@@ -46,7 +46,7 @@ export const Packages = () => {
     if (!mounted) return <section className="py-24 bg-transparent" id="packages" />;
 
     return (
-        <section className="py-24 px-6 relative overflow-hidden" id="packages">
+        <section className="py-24 px-6 relative overflow-hidden tex-dots bg-[#0C1220]" id="packages">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
                     <motion.div
