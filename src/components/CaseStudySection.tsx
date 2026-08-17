@@ -79,7 +79,7 @@ export const CaseStudySection = () => {
     if (!mounted) return null;
 
     return (
-        <section className="py-24 px-6 relative" id="case-studies">
+        <section className="py-24 px-6 relative overflow-hidden tex-dots glow-bg-blue bg-[#0B1533]" id="case-studies">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
                     <motion.div
