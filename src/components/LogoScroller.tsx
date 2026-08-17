@@ -28,10 +28,10 @@ const brands: { name: string; icon: React.ReactNode }[] = [
   { name: "HydraMax", icon: <svg viewBox="0 0 24 24" className="w-6 h-6"><path fill="currentColor" d="M12 2C8 8 5 11 5 15a7 7 0 0014 0c0-4-3-7-7-13z" /><path stroke="#C6FF3D" d="M8 15c1.5 1.5 6 1.5 8 0" strokeWidth="1.6" fill="none" strokeLinecap="round" /></svg> },
 ];
 
-const badges = [
+const badges: { src: string; alt: string; caption: string; big?: boolean }[] = [
   { src: "/badges/amazon-ads-advanced-partner.jpeg", alt: "Amazon Ads Advanced Partner", caption: "Advanced Partner" },
   { src: "/badges/amazon-ads-verified-partner.png", alt: "Amazon Ads Verified Partner", caption: "Verified Partner" },
-  { src: "/badges/amazon-marketing-cloud-provider.png", alt: "Amazon Marketing Cloud Provider", caption: "AMC Provider" },
+  { src: "/badges/amazon-marketing-cloud-provider.png", alt: "Amazon Marketing Cloud Provider", caption: "AMC Provider", big: true },
 ];
 
 export const LogoScroller = () => {
@@ -107,7 +107,7 @@ export const LogoScroller = () => {
           {badges.map((b) => (
             <div key={b.alt} className="flex flex-col items-center">
               <div className="grid place-items-center h-36 w-full max-w-[240px]">
-                <img src={b.src} alt={b.alt} className="max-h-28 w-auto object-contain" />
+                <img src={b.src} alt={b.alt} className={`w-auto object-contain ${b.big ? "max-h-40 scale-125" : "max-h-28"}`} />
               </div>
               <p className="mt-4 text-sm font-semibold text-gray-300">{b.caption}</p>
             </div>
