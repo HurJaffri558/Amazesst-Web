@@ -47,7 +47,7 @@ export const Process = () => {
     if (!mounted) return <section className="py-24 bg-transparent" id="process" />;
 
     return (
-        <section className="py-24 px-6 relative overflow-hidden bg-zinc-950/30" id="process">
+        <section className="py-24 px-6 relative overflow-hidden tex-dots bg-[#0E0F14]" id="process">
             <div className="max-w-5xl mx-auto">
                 <div className="text-center mb-20">
                     <motion.div
