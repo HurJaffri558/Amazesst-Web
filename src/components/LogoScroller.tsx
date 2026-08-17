@@ -54,9 +54,9 @@ export const LogoScroller = () => {
         </h2>
       </div>
 
-      <p className="max-w-7xl mx-auto px-6 mb-3 text-xs font-bold uppercase tracking-[0.14em] text-gray-500">
-        Amazon toolkit
-      </p>
+      <h3 className="max-w-7xl mx-auto px-6 mb-6 text-2xl md:text-3xl font-extrabold tracking-tight text-white text-center">
+        Amazon <span className="text-[#C6FF3D]">Toolkit</span>
+      </h3>
 
       <div className="flex overflow-hidden relative [mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)]">
         <motion.div
@@ -77,9 +77,9 @@ export const LogoScroller = () => {
         </motion.div>
       </div>
 
-      <p className="max-w-7xl mx-auto px-6 mb-3 mt-8 text-xs font-bold uppercase tracking-[0.14em] text-gray-500">
-        Brands we scale
-      </p>
+      <h3 className="max-w-7xl mx-auto px-6 mb-6 mt-20 text-2xl md:text-3xl font-extrabold tracking-tight text-white text-center">
+        Brands We <span className="text-[#C6FF3D]">Scale</span>
+      </h3>
 
       <div className="flex overflow-hidden relative [mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)]">
         <motion.div
