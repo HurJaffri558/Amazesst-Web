@@ -17,9 +17,9 @@ export default function Home() {
     <main className="min-h-screen bg-background selection:bg-primary/30">
       <Navbar />
       <Hero />
+      <LogoScroller />
       <Packages />
       <StatsSection />
-      <LogoScroller />
       <CaseStudySection />
       <Features />
       <Process />
