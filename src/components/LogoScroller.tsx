@@ -18,9 +18,9 @@ const tools = [
 ];
 
 const badges = [
-  { src: "/badges/amazon-ads-advanced-partner.jpeg", alt: "Amazon Ads Advanced Partner" },
-  { src: "/badges/amazon-ads-verified-partner.png", alt: "Amazon Ads Verified Partner" },
-  { src: "/badges/amazon-marketing-cloud-provider.png", alt: "Amazon Marketing Cloud Provider" },
+  { src: "/badges/amazon-ads-advanced-partner.jpeg", alt: "Amazon Ads Advanced Partner", caption: "Advanced Partner" },
+  { src: "/badges/amazon-ads-verified-partner.png", alt: "Amazon Ads Verified Partner", caption: "Verified Partner" },
+  { src: "/badges/amazon-marketing-cloud-provider.png", alt: "Amazon Marketing Cloud Provider", caption: "AMC Provider" },
 ];
 
 export const LogoScroller = () => {
@@ -66,12 +66,20 @@ export const LogoScroller = () => {
         </motion.div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-6 mt-16 flex flex-wrap gap-5 justify-center items-center">
-        {badges.map((b) => (
-          <div key={b.alt} className="bg-white rounded-2xl px-5 py-3.5 shadow-2xl grid place-items-center">
-            <img src={b.src} alt={b.alt} className="h-16 w-auto" />
-          </div>
-        ))}
+      <div className="max-w-5xl mx-auto px-6 mt-24 text-center">
+        <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight text-white mb-12">
+          Amazon Trusted Partner <span className="text-[#C6FF3D]">Certifications &amp; Awards</span>
+        </h3>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 items-start justify-items-center">
+          {badges.map((b) => (
+            <div key={b.alt} className="flex flex-col items-center">
+              <div className="bg-white rounded-2xl p-6 shadow-2xl grid place-items-center h-36 w-full max-w-[240px]">
+                <img src={b.src} alt={b.alt} className="max-h-24 w-auto object-contain" />
+              </div>
+              <p className="mt-4 text-sm font-semibold text-gray-300">{b.caption}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
