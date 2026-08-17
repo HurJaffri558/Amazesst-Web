@@ -47,7 +47,7 @@ export const Features = () => {
     if (!mounted) return null;
 
     return (
-        <section className="py-24 px-6 relative overflow-hidden" id="why-us">
+        <section className="py-24 px-6 relative overflow-hidden glow-bg-lime" id="why-us">
             <div className="max-w-7xl mx-auto relative z-10">
                 <div className="text-center mb-16">
                     <motion.div
