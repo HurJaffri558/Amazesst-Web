@@ -5,22 +5,22 @@ import { motion } from "framer-motion";
 
 const tools = [
   { name: "Jungle Scout", src: "/tools/jungle-scout.png" },
-  { name: "Keepa", src: "/tools/keepa.jpg" },
+  { name: "Keepa", src: "/tools/keepa.jpeg" },
+  { name: "Helium 10", src: "/tools/Hellium10.png" },
   { name: "DataDive", src: "/tools/datadive.png" },
-  { name: "Sellerboard", src: "/tools/sellerboard.jpg" },
-  { name: "Sellics", src: "/tools/sellics.jpg" },
+  { name: "Sellerboard", src: "/tools/sellerboard.jpeg" },
+  { name: "Sellics", src: "/tools/Sellics.jpeg" },
   { name: "Perpetua", src: "/tools/perpetua.jpg" },
-  { name: "Pacvue", src: "/tools/pacvue.png" },
+  { name: "SmartScout", src: "/tools/SmartScout.png" },
   { name: "Teikametrics", src: "/tools/teikametrics.jpg" },
-  { name: "Viral Launch", src: "/tools/viral-launch.png" },
-  { name: "AMZScout", src: "/tools/amzscout.png" },
+  { name: "Viral Launch", src: "/tools/Viral-Launch.png" },
+  { name: "AMZScout", src: "/tools/AMZ-Scout.png" },
 ];
 
 const badges = [
-  { src: "/badges/amazon-ads-advanced-partner.jpg", alt: "Amazon Ads Advanced Partner" },
+  { src: "/badges/amazon-ads-advanced-partner.jpeg", alt: "Amazon Ads Advanced Partner" },
   { src: "/badges/amazon-ads-verified-partner.png", alt: "Amazon Ads Verified Partner" },
   { src: "/badges/amazon-marketing-cloud-provider.png", alt: "Amazon Marketing Cloud Provider" },
-  { src: "/badges/innovation-award-2022.webp", alt: "Amazon Ads Innovation Award Winner US 2022" },
 ];
 
 export const LogoScroller = () => {
