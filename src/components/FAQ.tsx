@@ -40,7 +40,7 @@ export const FAQ = () => {
     if (!mounted) return null;
 
     return (
-        <section className="py-24 px-6 relative" id="faq">
+        <section className="py-24 px-6 relative overflow-hidden tex-dots bg-[#0C1220]" id="faq">
             <div className="max-w-3xl mx-auto">
                 <div className="text-center mb-16">
                     <motion.div
