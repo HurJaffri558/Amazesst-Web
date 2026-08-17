@@ -17,6 +17,17 @@ const tools = [
   { name: "AMZScout", src: "/tools/AMZ-Scout.png" },
 ];
 
+const brands: { name: string; icon: React.ReactNode }[] = [
+  { name: "VitaCore", icon: <svg viewBox="0 0 24 24" className="w-6 h-6"><path fill="currentColor" d="M12 2l8 4.6v9.2L12 22 4 15.8V6.6z" /><circle cx="12" cy="12" r="3.4" fill="#C6FF3D" /></svg> },
+  { name: "PureLeaf", icon: <svg viewBox="0 0 24 24" className="w-6 h-6"><path fill="currentColor" d="M20 4C10 4 4 10 4 20c9 1 16-4 16-16z" /><path stroke="#C6FF3D" d="M8 18c3-5 6-7 9-8" strokeWidth="1.6" fill="none" /></svg> },
+  { name: "NutriPeak", icon: <svg viewBox="0 0 24 24" className="w-6 h-6"><path fill="currentColor" d="M3 20L10 6l4 7 3-4 4 11z" /><path fill="#C6FF3D" d="M10 6l2.4 4.2-1.2 2L8.5 9z" /></svg> },
+  { name: "OmegaWell", icon: <svg viewBox="0 0 24 24" className="w-6 h-6"><path fill="currentColor" d="M12 2C8 8 5 11 5 15a7 7 0 0014 0c0-4-3-7-7-13z" /><circle cx="12" cy="15" r="3" fill="#C6FF3D" /></svg> },
+  { name: "GreenRoots", icon: <svg viewBox="0 0 24 24" className="w-6 h-6"><rect x="10.7" y="3" width="2.6" height="10" rx="1" fill="currentColor" /><path stroke="#C6FF3D" d="M12 13c-3 2-4 5-4 8M12 13c3 2 4 5 4 8M12 13v8" strokeWidth="1.6" fill="none" strokeLinecap="round" /></svg> },
+  { name: "DailyDose", icon: <svg viewBox="0 0 24 24" className="w-6 h-6"><rect x="3.5" y="8.5" width="17" height="7" rx="3.5" fill="currentColor" /><rect x="12" y="8.5" width="8.5" height="7" rx="3.5" fill="#C6FF3D" /></svg> },
+  { name: "ProteinIQ", icon: <svg viewBox="0 0 24 24" className="w-6 h-6"><rect x="3" y="10" width="3" height="4" rx="1" fill="currentColor" /><rect x="18" y="10" width="3" height="4" rx="1" fill="currentColor" /><rect x="6" y="11" width="12" height="2" fill="#C6FF3D" /><rect x="7" y="8.5" width="2.5" height="7" rx="1" fill="currentColor" /><rect x="14.5" y="8.5" width="2.5" height="7" rx="1" fill="currentColor" /></svg> },
+  { name: "HydraMax", icon: <svg viewBox="0 0 24 24" className="w-6 h-6"><path fill="currentColor" d="M12 2C8 8 5 11 5 15a7 7 0 0014 0c0-4-3-7-7-13z" /><path stroke="#C6FF3D" d="M8 15c1.5 1.5 6 1.5 8 0" strokeWidth="1.6" fill="none" strokeLinecap="round" /></svg> },
+];
+
 const badges = [
   { src: "/badges/amazon-ads-advanced-partner.jpeg", alt: "Amazon Ads Advanced Partner", caption: "Advanced Partner" },
   { src: "/badges/amazon-ads-verified-partner.png", alt: "Amazon Ads Verified Partner", caption: "Verified Partner" },
@@ -61,6 +72,28 @@ export const LogoScroller = () => {
             >
               <img src={t.src} alt={t.name} className="w-6 h-6 object-contain" />
               {t.name}
+            </div>
+          ))}
+        </motion.div>
+      </div>
+
+      <p className="max-w-7xl mx-auto px-6 mb-3 mt-8 text-xs font-bold uppercase tracking-[0.14em] text-gray-500">
+        Brands we scale
+      </p>
+
+      <div className="flex overflow-hidden relative [mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)]">
+        <motion.div
+          animate={{ x: [-1200, 0] }}
+          transition={{ duration: 38, repeat: Infinity, ease: "linear" }}
+          className="flex flex-none gap-12 py-4"
+        >
+          {[...brands, ...brands, ...brands].map((b, i) => (
+            <div
+              key={i}
+              className="flex items-center gap-2.5 whitespace-nowrap text-gray-300 hover:text-white transition-colors font-bold text-xl tracking-tight"
+            >
+              <span className="text-white">{b.icon}</span>
+              {b.name}
             </div>
           ))}
         </motion.div>
