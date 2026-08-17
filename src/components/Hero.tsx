@@ -16,7 +16,7 @@ export const Hero = () => {
     );
 
     return (
-        <section className="relative min-h-screen flex items-center justify-center pt-24 pb-12 overflow-hidden px-6">
+        <section className="relative min-h-screen flex items-center justify-center pt-24 pb-12 overflow-hidden px-6 glow-bg-lime tex-grain">
             {/* Dynamic Background Elements */}
             <div className="absolute inset-0 z-0">
                 <div className="absolute top-[10%] left-[5%] w-72 h-72 bg-[#2E5BFF]/25 rounded-full blur-[120px] animate-pulse" />
