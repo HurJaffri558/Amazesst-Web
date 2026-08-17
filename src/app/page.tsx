@@ -19,6 +19,7 @@ export default function Home() {
       <Hero />
       <Packages />
       <StatsSection />
+      <LogoScroller />
       <CaseStudySection />
       <Features />
       <Process />
