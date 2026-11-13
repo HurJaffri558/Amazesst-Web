@@ -1,0 +1,44 @@
+{
+  "framework": null,
+  "installCommand": "echo Static site",
+  "buildCommand": "echo Static site",
+  "outputDirectory": "amazesst-production",
+  "cleanUrls": false,
+  "redirects": [
+    {
+      "source": "/Amazesst_Website_Testimonials_VSL.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "destination": "/#blog",
+      "permanent": true
+    },
+    {
+      "source": "/starter",
+      "destination": "/#services",
+      "permanent": true
+    },
+    {
+      "source": "/growth",
+      "destination": "/#services",
+      "permanent": true
+    },
+    {
+      "source": "/scale",
+      "destination": "/#services",
+      "permanent": true
+    },
+    {
+      "source": "/enterprise",
+      "destination": "/#services",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies/:path*",
+      "destination": "/#cases",
+      "permanent": true
+    }
+  ]
+}
