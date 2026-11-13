@@ -1,7 +1,7 @@
 {
   "framework": null,
   "installCommand": "echo Static site",
-  "buildCommand": "unzip -q amazesst-production.zip",
+  "buildCommand": "unzip -q amazesst-production.zip && python3 -c \"from pathlib import Path; p=Path('amazesst-production/index.html'); s=p.read_text(); p.write_text(s.replace('</head>', '<style>#founder .founder-photo{display:block;aspect-ratio:auto;background:#08090c}#founder .founder-portrait{position:static;display:block;width:100%;height:auto}</style></head>', 1))\"",
   "outputDirectory": "amazesst-production",
   "cleanUrls": false,
   "redirects": [
