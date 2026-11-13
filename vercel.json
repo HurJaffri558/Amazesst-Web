@@ -1,7 +1,7 @@
 {
   "framework": null,
   "installCommand": "echo Static site",
-  "buildCommand": "unzip -qo amazesst-production.zip && node -e 'const fs=require(\"node:fs\"); const p=\"amazesst-production/index.html\"; fs.writeFileSync(p,fs.readFileSync(p,\"utf8\").replace(\"</head>\",\"<style>#founder .founder-photo{display:block;aspect-ratio:auto;background:#08090c}#founder .founder-portrait{position:static;display:block;width:100%;height:auto}</style></head>\"))'",
+  "buildCommand": "unzip -qo amazesst-production.zip && sed -i '/^.founder-photo{/s/aspect-ratio:4\\/5/aspect-ratio:auto/; /^.founder-photo .founder-portrait{/s/{.*/{display:block;width:100%;height:auto;position:relative}/' amazesst-production/index.html",
   "outputDirectory": "amazesst-production",
   "cleanUrls": false,
   "redirects": [
